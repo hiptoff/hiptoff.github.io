@@ -1,0 +1,130 @@
+@font-face
+{
+	font-family: TooltipFont;
+	src: url(style/EagleLake-Regular.ttf);
+}
+
+#tooltip
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	background: #1f2937;
+	color: #fff;
+	padding: 10px 14px;
+	border-radius: 8px;
+	font-size: 13px;
+	white-space: nowrap;
+
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 0.2s ease, transform 0.2s ease;
+
+	z-index: 100;
+	
+	font-family: TooltipFont;
+	line-height: 1;
+}
+#tooltip.visible
+{
+	opacity: 1;
+	visibility: visible;
+}
+
+button
+{
+	cursor: pointer;
+	
+	padding: 0;
+	outline: none;
+	box-shadow: none;
+	border: none;
+	
+	backface-visibility: hidden;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-backface-visibility: hidden;
+	
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-color: transparent;
+	
+	transform: scale(1);
+	transition: transform 0.1s ease;
+}
+
+#home
+{
+	z-index: 100;
+	
+	position: fixed;
+	top: 1%;
+	left: 1%;
+	
+	width: auto;
+	height: 7dvh;
+	aspect-ratio: 62/64;
+
+	background-image: url('style/home.png');
+}
+#home:hover
+{
+	transform: scale(1.075);
+}
+#home:active
+{
+	transform: scale(1.02);
+}
+
+.amazon
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	
+	width: auto;
+	height: 5dvh;
+	aspect-ratio: 64/64;
+	background-image: url('style/amazon.png');
+}
+.amazon:hover
+{
+	transform: scale(1.075);
+}
+.amazon:active
+{
+	transform: scale(1.02);
+}
+
+video
+{
+	width: auto;
+	height: 60dvh;
+	aspect-ratio: 9/16;
+	border: none;
+	margin-bottom: 50px;
+}
+
+blockquote
+{
+	font-style: italic;
+}
+blockquote::before
+{
+	content: '“';
+}
+blockquote::after
+{
+	content: '”';
+}
+
+@media (orientation: portrait)
+{
+	#tooltip.visible
+	{
+		opacity: 0;
+		visibility: hidden;
+	}
+}

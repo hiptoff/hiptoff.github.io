@@ -1,0 +1,218 @@
+body
+{
+	background-attachment: fixed;
+	background-color: #178100;
+	background-image: url('style/background.png');
+	background-size: auto 100dvh;
+	background-repeat: repeat-x;
+	background-position: top left;
+	width: auto;
+	height: 100dvh;
+	overflow: hidden;
+	margin: 0;
+}
+body::after
+{
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: #FFFF0022;
+	mix-blend-mode: multiply;
+	pointer-events: none;
+	z-index: 999999;
+}
+
+#title
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+	z-index: 1;
+	background-image: url('style/title.png');
+	background-size: auto 25dvh;
+	background-repeat: no-repeat;	
+	width: 100%;
+	height: 100%;
+	
+	background-position: 70% 0%;
+}
+
+#trees
+{
+	z-index: 1;
+	background-image: url('style/trees.png');
+	background-size: auto 100dvh;
+	background-repeat: no-repeat;	
+	width: 100%;
+	height: 100%;
+	
+	background-position: 0 0;
+}
+
+#stump
+{
+	z-index: 2;
+	
+	position: relative;
+	left: min(15dvw, 150px);
+	bottom: min(10dvh, 100px);
+	
+	background-image: url('style/stump.png');
+	background-size: auto 25dvh;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	
+	width: 75%;
+	height: 100%;
+	
+	pointer-events: none;
+}
+
+#books
+{
+	z-index: 3;
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+	width: 100%;
+	height: 100%;
+	
+	pointer-events: none;
+}
+#books button
+{
+  pointer-events: auto;
+}
+
+.book
+{
+	z-index: 4;
+	position: absolute;
+	left: 0;
+	width: auto;
+	height: 7dvh;
+}
+.book:hover
+{
+	transform: scale(1.075);
+}
+.book:active
+{
+	transform: scale(1.02);
+}
+
+#book_1
+{
+	top: 79%;
+	background-image: url("style/book_1.png");
+	aspect-ratio: 434/104;
+}
+
+#copyright
+{
+	z-index: 10;
+	
+	top: 95%;
+	left: min(-5dvw, -50px);
+	
+	background-image: url('style/copyright.png');
+	
+	aspect-ratio: 109/123;
+	height: 10dvh;
+}
+#copyright:hover
+{
+	transform: scale(1.25);
+}
+#copyright:active
+{
+	transform: scale(1.2);
+}
+
+#social_media_list
+{
+	z-index: 3;
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+	width: 100%;
+	height: 100%;
+	
+	pointer-events: none;
+}
+#social_media_list button
+{
+  pointer-events: auto;
+}
+
+.social_media
+{
+	position: absolute;
+	left: 0;
+	width: auto;
+	height: 15dvh;
+	aspect-ratio: 167/176;
+}
+.social_media:hover
+{
+	transform: scale(1.05);
+}
+.social_media:active
+{
+	transform: scale(1.02);
+}
+
+#social_media_1
+{
+	z-index: 6;
+	top: -2%;
+	background-image: url("style/bluesky_off.png");	
+}
+#social_media_1:hover
+{
+	background-image: url("style/bluesky_on.png");	
+}
+
+#social_media_2
+{
+	z-index: 5;
+	top: 8.4%;
+	background-image: url("style/tiktok_off.png");	
+}
+#social_media_2:hover
+{
+	background-image: url("style/tiktok_on.png");	
+}
+
+#social_media_3
+{
+	z-index: 4;
+	top: 18.8%;
+	background-image: url("style/tumblr_off.png");	
+}
+#social_media_3:hover
+{
+	background-image: url("style/tumblr_on.png");	
+}
+
+#social_media_4
+{
+	z-index: 3;
+	top: 29.2%;
+	background-image: url("style/facebook_off.png");	
+}
+#social_media_4:hover
+{
+	background-image: url("style/facebook_on.png");	
+}
+
+@media (orientation: portrait)
+{
+	#trees
+	{
+		background-position: -600px 0;
+	}
+}

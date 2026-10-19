@@ -1,0 +1,116 @@
+@font-face
+{
+	font-family: CustomFont;
+	src: url(style/IndieFlower-Regular.ttf);
+}
+
+*
+{
+	font-family: CustomFont;
+	font-size: 1.1em;
+}
+
+#tooltip
+{
+	font-family: CustomFont;
+	font-size: 1.1em;
+	line-height: 0.8;
+}
+
+body
+{
+	background-attachment: fixed;
+	background-color: #353535;
+	background-image: url('style/background.png');
+	background-size: auto 100dvh;
+	background-repeat: repeat-x;
+	background-position: top left;
+	width: auto;
+	height: 100dvh;
+	display: flow-root;
+	margin: 0 0 200px 0;
+}
+
+#copyright
+{
+	z-index: 100;
+	
+	position: fixed;
+	top: 90%;
+	left: 1%;
+	
+	background-image: url('style/copyright.png');
+	
+	aspect-ratio: 111/133;
+	height: 7dvh;
+}
+#copyright:hover
+{
+	transform: scale(1.075);
+}
+#copyright:active
+{
+	transform: scale(1.02);
+}
+
+#content
+{
+	position: relative;
+	
+	max-width: 800px;
+	text-align: center;
+	margin: 100px auto;
+	padding: 0 50px;
+	
+	border: 12px solid transparent;
+	border-image-source: url("style/content_bg.png");
+	border-image-slice: 12 fill;
+	border-image-width: 12px;
+	border-image-repeat: stretch;
+}
+
+#book_title
+{
+	font-size: 2em;
+	margin: 0;
+	font-weight: bold;
+}
+
+#front_page
+{
+	height: 35dvh;
+	border: 2px solid white;
+	margin-bottom: 20px;
+}
+
+video
+{
+	border: 2px solid white;
+}
+
+.subtitle
+{
+	font-variant: small-caps;
+	text-align: left;
+	margin: -10px 0;
+	padding: 0 10px;
+	background-color: #FFFFFF33;
+}
+
+h2, p, blockquote
+{
+	color: white;
+}
+
+.youtube
+{
+	border: 2px solid white;
+}
+
+@media (orientation: portrait)
+{
+	*
+	{
+		font-size: 1.3em;
+	}
+}
